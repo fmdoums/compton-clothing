@@ -1,7 +1,5 @@
-import CategoryItem from "./category-item.component";
-import "./categories-menu.component.scss";
-
-const CategoriesMenu = () => {
+import CategoriesMenu from "../../components/menu/categories-menu.component";
+const Home = () => {
   const categories = [
     {
       id: 1,
@@ -31,13 +29,7 @@ const CategoriesMenu = () => {
         "https://media.istockphoto.com/id/1265973789/fr/photo/fille-heureuse-d%C3%A9ballant-des-v%C3%AAtements-apr%C3%A8s-le-magasinage-en-ligne.jpg?s=1024x1024&w=is&k=20&c=176lD075hBntsx3Ac9DoOX9kwK5cvcRYumBMZwVdCaI=",
     },
   ];
-  return (
-    <div className="categories-container">
-      {categories.map((category) => (
-        <CategoryItem key={category.id} category={category} />
-      ))}
-    </div>
-  );
+  return <CategoriesMenu categories={categories} />;
 };
 
-export default CategoriesMenu;
+export default Home;
